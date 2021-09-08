@@ -1,61 +1,78 @@
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	letter-spacing: 1px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	text-transform: capitalize;
+}
 
 body {
-font: normal normal 13px/16px "Open Sans", sans-serif;
-background: #dfdfdf;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(45deg, rgb(199, 199, 195) 50%, #333 50%);
 }
 
-.container{
-padding: 20px;
-width: 300px;
-margin: 0 auto;
-margin-top: 40px;
-background: white;
-border-radius: 5px;}
-
-form {
-display: inline-block;
+h2 {
+	text-align: center;
+	font-size: 24px;
 }
 
-input{
-padding: 4px 15px 4px 5px;
+.container {
+	height: 600px;
+	width: 450px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 10px 20px rgb(0, 0, 0, 0.5);
+	padding: 10px;
+	overflow-y: auto;
 }
 
-#button{
-display: inline-block;
-background-color:#fc999b;
-color:#ffffff;
-border-radius: 5px;
-text-align:center;
-margin-top:2px;
-padding: 5px 15px;
-}
-
-#button:hover{
-cursor: pointer;
-opacity: .8;}
-
-ol {padding-left: 20px;}
-
-ol li {padding: 5px;color:#000;}
-
-ol li:nth-child(even){background: #dfdfdf;}
-
-.strike{text-decoration: line-through;}
-
-li:hover{
-  cursor: pointer;
- }
-
-.delete {
-	display: none;
-}
-
-li > crossOutButton {
-	background: none;
+#input {
+	height:50px;
+	width: 100%;
+	outline: none;
 	border: none;
-	float: right;
-	color: #025f70;
-	font-weight: 800;
+	border-radius: 5px;
+	background: #666;
+	color: #fff;
+	padding: 0 10px;
+	margin: 15px 0; 
+}
+
+#input::placeholder {
+	color: #bbb;
+}
+
+ul li {
+	background: #eee;
+	color: #333;
+	height: 40px;
+	border-radius: 50px;
+	margin: 10px 0;
+	padding: 10px;
+	position: relative;
+}
+
+ul .fa-check, .fa-trash {
+	position: absolute;
+	cursor: pointer;
+}
+
+ul .fa-check {
+	right: 40px;
+	color: green;
+}
+
+ul .fa-trash {
+	right: 15px;
+	color: red;
+}
+
+ul .checked {
+	background: rgb(146, 201, 146);
+	text-decoration: line-through;
+	transition: .2s;
 }
