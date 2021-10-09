@@ -2,9 +2,7 @@
 
 A basic to-do-list app using ***jQuery***.
 
-## User Goals
-
-A user should be able to add task, mark task as done and delete a task.
+![TodoList](/todolist.mov)
 
 ## Key Features
 > Add a task by pressing enter
